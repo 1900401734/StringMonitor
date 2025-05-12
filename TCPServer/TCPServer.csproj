@@ -1,0 +1,34 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <OutputType>WinExe</OutputType>
+    <TargetFramework>net8.0-windows</TargetFramework>
+    <Nullable>enable</Nullable>
+    <UseWindowsForms>true</UseWindowsForms>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <ApplicationIcon>favicon.ico</ApplicationIcon>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <None Remove="C:\Users\Mr.Sheep\.nuget\packages\nlog.config\4.7.15\contentFiles\any\any\NLog.config" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="NLog" Version="5.4.0" />
+    <PackageReference Include="NLog.Config" Version="4.7.15" />
+    <PackageReference Include="Ude.NetStandard" Version="1.2.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Program.cs">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <None Update="NLog.config">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
+</Project>
