@@ -17,6 +17,9 @@ namespace TCPServer
         private NotifyIcon? notifyIcon;
         private ContextMenuStrip? trayMenu;
 
+
+        // Comment
+
         public FormServer()
         {
             InitializeComponent();
